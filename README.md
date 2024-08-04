@@ -26,19 +26,19 @@ The styling has been done with `TailwindCSS` with minimal extension from its def
 Package manager used is `pnpm` so, to run the project locally, type the following:
 
 ```zsh
-    pnpm dev
+pnpm dev
 ```
 
 You can also lint the entire project using `Eslint` and its plugins to match our used technologies:
 
 ```zsh
-    pnpm lint
+pnpm lint
 ```
 
 Same thing goes with formatting, using `Prettier` and its plugins:
 
 ```zsh
-    pnpm format
+pnpm format
 ```
 
 ## More Info
