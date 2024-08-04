@@ -1,0 +1,5 @@
+[pre-commit.commands.lint]
+run = "pnpm eslint {staged_files}"
+
+[pre-commit.commands.format]
+run = "pnpm prettier --write {staged_files}"

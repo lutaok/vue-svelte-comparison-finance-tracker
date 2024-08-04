@@ -1,0 +1,19 @@
+---
+import FinanceTracker from "../components/svelte/FinanceTracker/FinanceTracker.svelte";
+import Sidebar from "../components/svelte/Sidebar/Sidebar.svelte";
+import DashboardLayout from "../layouts/DashboardLayout.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Svelte Finance Tracker" description="Finance Tracker made with Svelte">
+  <DashboardLayout
+    tech="svelte"
+    links={[
+      { label: "Home", href: "/" },
+      { label: "See Vue!", href: "/vue" },
+    ]}
+  >
+    <Sidebar slot="sidebar" client:load />
+    <FinanceTracker client:idle />
+  </DashboardLayout>
+</Layout>

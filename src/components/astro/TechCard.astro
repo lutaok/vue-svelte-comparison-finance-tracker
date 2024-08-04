@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  techImageUrl: string;
+  techAlt?: string;
+  landingHref: string;
+  landingLabel: string;
+  className?: string;
+}
+
+const { title, techImageUrl, techAlt, landingHref, landingLabel, className = "" } = Astro.props;
+---
+
+<div class={`flex h-96 w-80 flex-col items-center gap-2 rounded-xl bg-slate-700 p-4 ${className}`}>
+  <h2>{title}</h2>
+  <div class="flex h-full w-full items-center justify-center">
+    <img height="208" src={techImageUrl} alt={techAlt || ""} class="max-w-52 object-contain" />
+  </div>
+
+  <a
+    href={landingHref}
+    class="rounded-lg border-2 border-slate-950 bg-slate-100 px-4 py-2 text-black hover:border-slate-800 hover:bg-slate-200 hover:text-slate-800 active:border-black active:bg-slate-300 active:text-slate-950"
+  >
+    {landingLabel}
+  </a>
+</div>

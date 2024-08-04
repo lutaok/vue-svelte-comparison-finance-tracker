@@ -1,0 +1,27 @@
+---
+import Footer from "../components/astro/Footer.astro";
+import Header from "../components/astro/Header.astro";
+import MainContent from "../components/astro/MainContent.astro";
+import Sidebar from "../components/svelte/Sidebar/Sidebar.svelte";
+
+interface Props {
+  tech: "vue" | "svelte";
+  links: {
+    label: string;
+    href: string;
+  }[];
+}
+
+const { tech, links } = Astro.props;
+---
+
+<Header tech={tech} links={links} />
+
+<div class="flex min-h-[calc(100%-8rem)]">
+  <slot name="sidebar" />
+  <MainContent className="grow">
+    <slot />
+  </MainContent>
+</div>
+
+<Footer />

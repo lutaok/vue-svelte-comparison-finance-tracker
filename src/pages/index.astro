@@ -1,0 +1,33 @@
+---
+import TechCard from "../components/astro/TechCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Personal Finance Tracker Demo" description="A demo of a personal finance tracker using Svelte or Vue">
+  <main class="flex flex-col items-center justify-center gap-4 p-4">
+    <h1 class="text-2xl font-bold">Personal Finance Tracker</h1>
+    <p class="text-sm">Choose your tech:</p>
+
+    <ul class="flex flex-col flex-wrap items-center justify-center gap-8 md:flex-row">
+      <li>
+        <TechCard
+          title="Svelte"
+          techImageUrl="/images/svelte-logo.png"
+          techAlt="Svelte logo"
+          landingHref="/svelte"
+          landingLabel="See Svelte!"
+        />
+      </li>
+
+      <li>
+        <TechCard
+          title="Vue"
+          techImageUrl="/images/vue-logo.png"
+          techAlt="Vue logo"
+          landingHref="/vue"
+          landingLabel="See Vue!"
+        />
+      </li>
+    </ul>
+  </main>
+</Layout>

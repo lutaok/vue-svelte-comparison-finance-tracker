@@ -1,0 +1,33 @@
+---
+interface Props {
+  tech: "vue" | "svelte";
+  links: {
+    label: string;
+    href: string;
+  }[];
+}
+
+const { tech, links } = Astro.props;
+---
+
+<header class="flex h-16 items-center justify-center gap-4 border-b-2 border-b-slate-300 bg-slate-700 px-8">
+  <div class="w-8">
+    <img src={`/images/${tech}-logo.png`} alt={`${tech} logo`} />
+  </div>
+  <nav>
+    <ul class="flex gap-4">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="underline underline-offset-2 visited:text-lime-100 hover:text-lime-300 active:text-lime-600"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
