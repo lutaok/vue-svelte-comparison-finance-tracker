@@ -1,54 +1,56 @@
-# Astro Starter Kit: Basics
+# Svelte 4 and Vue 3 comparison with Astro
 
-```sh
-npm create astro@latest -- --template basics
+This project aims to make a comparison between Svelte 4 and Vue 3 (Single File Components).
+
+## Project Structure
+
+It's a simple and unfinished personal finance tracker app where there are a few client components:
+
+- Sidebar
+- Expense Tracker
+- Income Tracker
+- Total Balance Tracker
+- Input field
+
+Remaining parts of the app are Astro components:
+
+- Document
+- Header
+- Main Content Wrapper
+- Footer
+
+The styling has been done with `TailwindCSS` with minimal extension from its default configuration.
+
+## Usage
+
+Package manager used is `pnpm` so, to run the project locally, type the following:
+
+```
+    pnpm dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+You can also lint the entire project using `Eslint` and its plugins to match our used technologies:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+    pnpm lint
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Same thing goes with formatting, using `Prettier` and its plugins:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+    pnpm format
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## More Info
 
-## 🧞 Commands
+> [!WARNING]
+> It's an unfinished project and it needs optimization and I didn't use every API those two frameworks have to offer.
+> It was a learning experience for `Vue 3`, which I came to reconsider after trying it out on its `Vue 2` version.
+> If you have any critique or feedback please open an Issue, I would love to learn more about it.
 
-All commands are run from the root of the project, from a terminal:
+## Conclusion
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Thanks for stepping by!
+I think `Vue` approach is pretty unique and works very well with `Typescript`, inferring return types from generics and making the `script setup` tag less bloated with objects and stuff.
+I still find `Svelte` much more straightforward when it comes to APIs and DX in general, but I also understand that `Svelte` compiler makes you write a JS-like language and not pure `Javascript`.
+I'm excited to see if `Vue Vapor Mode` will enhance its DX and I'm also excited for `Svelte 5` release!
